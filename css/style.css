@@ -1,0 +1,42 @@
+/* general styles */
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* navbar styles */
+nav {
+    margin: 0px;
+    padding: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* nav link styles */
+nav a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: color 0.3s ease; /* smooth transition for text color change */
+}
+
+/* hover effect for nav links */
+a:hover {
+    color: white;
+}
+
+/* active link styling */
+nav .active {
+    background: white;
+    color: black;
+}
