@@ -1,80 +1,110 @@
-    /* General Styles */
-    body {
-        background-image: url('../images/background.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        height: 100vh;
-        margin: 0;
-        font-family: 'Lexend', sans-serif;
-    }
+/* General Styles */
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+}
 
-    /* Navbar Styles */
+/* Navbar Styles */
+nav {
+    height: 5%;
+    position: fixed; /* Fixes the navbar to the top */
+    top: 0; /* Positions it at the top */
+    width: 100%; /* Full width */
+    background-color: rgba(160, 223, 205, 0.8);
+    padding: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Spacing between items */
+
+}
+
+/* Nav Link Styles */
+nav a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Active Link Styling */
+nav #active {
+    background: white;
+    color: black;
+}
+
+/* Hamburger Menu Icon */
+#menu-toggle {
+    display: none; /* Hidden by default */
+}
+
+/* Main Styles */
+#home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5%;
+    padding-top: 10%;
+}
+
+#home img {
+    width:50px;
+    height:auto;
+}
+#intro {
+    font-size: 1.5rem;
+    padding-bottom: 15%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 7rem;
+    color: #35c997;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
     nav {
-        margin: 0px;
-        padding: 20px;
-        font-size: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px; /* Spacing between items */
+        display:flex;
+        flex-direction: column;
+        align-items: end;
     }
 
-    /* Nav Link Styles */
-    nav a {
-        text-align: center;
-        color: black;
-        text-decoration: none;
-        padding: 10px 20px;
-        margin: 5px;
-        border-radius: 30px;
-        transition: color 0.3s ease, background-color 0.3s ease;
-    }
-
-    /* Hover effect for nav links */
-    a:hover {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    /* Active Link Styling */
-    nav .active {
-        background: white;
-        color: black;
-    }
-
-    /* Hamburger Menu Icon */
     #menu-toggle {
-        display: none; /* Hidden by default */
+        display: block; /* Show the menu button on small screens */
+        background: none;
+        font-size: 1.5rem;
+        border-radius: 10px;
     }
 
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        nav {
-            display:flex;
-            flex-direction: column;
-            align-items: end;
-        }
-
-        #menu-toggle {
-            display: block; /* Show the menu button on small screens */
-            background: none;
-            font-size: 1.5rem;
-            border-radius: 10px;
-        }
-
-        #nav-items {
-            display:flex;
-            flex-direction: column;
-            max-height: 0; /* Hidden by default */
-            overflow: hidden; /* Hide the links initially */
-            transition: max-height 0.5s ease-in-out; /* Smooth transition */
-            width: 100%; /* Take full width on small screens */
-            color: white;
-        }
-
-        nav a {
-            padding: 20px; /* Larger padding for better touch interaction on mobile */
-        }
+    #nav-items {
+        display:flex;
+        flex-direction: column;
+        max-height: 0; /* Hidden by default */
+        overflow: hidden; /* Hide the links initially */
+        transition: max-height 0.5s ease-in-out; /* Smooth transition */
+        width: 100%; /* Take full width on small screens */
+        color: white;
     }
+
+    nav a {
+        padding: 20px; /* Larger padding for better touch interaction on mobile */
+    }
+}
