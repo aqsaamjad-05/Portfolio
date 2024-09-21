@@ -1,42 +1,80 @@
-/* general styles */
-body {
-    background-image: url('../images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Lexend', sans-serif;
-}
+    /* General Styles */
+    body {
+        background-image: url('../images/background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Lexend', sans-serif;
+    }
 
-/* navbar styles */
-nav {
-    margin: 0px;
-    padding: 20px;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    /* Navbar Styles */
+    nav {
+        margin: 0px;
+        padding: 20px;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; /* Spacing between items */
+    }
 
-/* nav link styles */
-nav a {
-    text-align: center;
-    color: black;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    transition: color 0.3s ease; /* smooth transition for text color change */
-}
+    /* Nav Link Styles */
+    nav a {
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 30px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
 
-/* hover effect for nav links */
-a:hover {
-    color: white;
-}
+    /* Hover effect for nav links */
+    a:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 
-/* active link styling */
-nav .active {
-    background: white;
-    color: black;
-}
+    /* Active Link Styling */
+    nav .active {
+        background: white;
+        color: black;
+    }
+
+    /* Hamburger Menu Icon */
+    #menu-toggle {
+        display: none; /* Hidden by default */
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        nav {
+            display:flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        #menu-toggle {
+            display: block; /* Show the menu button on small screens */
+            background: none;
+            font-size: 1.5rem;
+            border-radius: 10px;
+        }
+
+        #nav-items {
+            display:flex;
+            flex-direction: column;
+            max-height: 0; /* Hidden by default */
+            overflow: hidden; /* Hide the links initially */
+            transition: max-height 0.5s ease-in-out; /* Smooth transition */
+            width: 100%; /* Take full width on small screens */
+            color: white;
+        }
+
+        nav a {
+            padding: 20px; /* Larger padding for better touch interaction on mobile */
+        }
+    }
