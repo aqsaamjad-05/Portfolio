@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background-image: url('../images/background.png');
+    background-image: url('../images/background.png'); /* set the background image*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,15 +12,15 @@ body {
 
 /* Navbar Styles */
 nav { 
-    position: fixed;
-    width: 100%;  
+    position: fixed; /* fix navbar to the top of page */
+    width: 100%;
     background-color: rgba(160, 223, 205, 0.8);
     padding: 30px;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Spacing between items */
+    gap: 30px; /* spacing between items */
 
 }
 
@@ -32,7 +32,7 @@ nav a {
     padding: 10px 20px;
     margin: 5px;
     border-radius: 30px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease; /*smooth transition*/
 }
 
 /* Hover effect for nav links */
@@ -54,10 +54,6 @@ nav #active {
 }
 
 /* Main Styles */
-
-main {
-    padding: 20px;
-}
 #home {
     display: flex;
     flex-direction: column;
@@ -68,7 +64,7 @@ main {
 
 #home img {
     width:50px;
-    height:auto;
+    height:auto; /* keep aspect ratio */
 }
 #intro {
     font-size: 1.5rem;
@@ -81,7 +77,16 @@ h1 {
     color: #35c997;
 }
 
+#about {
+    padding: 12%;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    text-align: justify;
+}
 
+h2 { 
+    font-size: 2.5rem;
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
     nav {
