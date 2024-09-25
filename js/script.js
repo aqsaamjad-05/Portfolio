@@ -1,9 +1,8 @@
-let navItems = document.getElementById("nav-items");
-
 function toggleMenu() {
-    if (navItems.style.maxHeight === "0px" || navItems.style.maxHeight === "") {
-        navItems.style.maxHeight = "300px"; // expand to show the menu
+    const navItems = document.getElementById('nav-items');
+    if (navItems.style.maxHeight) {
+        navItems.style.maxHeight = null; // Close the menu
     } else {
-        navItems.style.maxHeight = "0px"; // collapse to hide the menu
+        navItems.style.maxHeight = navItems.scrollHeight + "px"; // Open the menu
     }
 }

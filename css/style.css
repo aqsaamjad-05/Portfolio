@@ -11,13 +11,11 @@ body {
 }
 
 /* Navbar Styles */
-nav {
-    height: 5%;
-    position: fixed; /* Fixes the navbar to the top */
-    top: 0; /* Positions it at the top */
-    width: 100%; /* Full width */
+nav { 
+    position: fixed;
+    width: 100%;  
     background-color: rgba(160, 223, 205, 0.8);
-    padding: 20px;
+    padding: 30px;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -52,15 +50,20 @@ nav #active {
 /* Hamburger Menu Icon */
 #menu-toggle {
     display: none; /* Hidden by default */
+    margin-right: 50px;
 }
 
 /* Main Styles */
+
+main {
+    padding: 20px;
+}
 #home {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 5%;
-    padding-top: 10%;
+    padding-top: 15%;
 }
 
 #home img {
